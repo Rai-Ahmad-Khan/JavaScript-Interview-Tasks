@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2</title>
+</head>
+<body>
+
+    <h1>Check Number</h1>
+    <p>Check Number divisible of 2 or 3.</p>
+    <input type="text" name="" id="input">
+    <button type="submit" onclick="checkme()"> Check</button>
+
+    <p id="id"></p>
+
+    <script>
+        
+       function checkme() {
+        const my_number = document.getElementById("input");
+
+        const number = my_number.value
+      
+        if(number%2==0) {
+
+            document.getElementById("id").innerHTML= `Your number is ${number} and it is divisible by 2.`;
+
+        } else if(number%3==0){
+
+            document.getElementById("id").innerHTML= `Your number is ${number} and it is divisible by 3.`;
+
+        } else {
+
+            document.getElementById("id").innerHTML= `Your number is ${number} and it is not divisible of 2 and 3.`;
+        }
+       }
+       
+    </script>
+    
+</body>
+</html>

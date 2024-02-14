@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+
+
+
+
+    <script>
+    //  Setting Prototype   =   __proto__ 
+
+        let a = {
+            name: 'ahmad',
+            email:'@gmail.com'
+        }
+        let p= {
+            phone: '0343*******'
+        }
+
+        a.__proto__ =p
+
+        console.log(a.phone)
+        // Prototype can also have a nested prototype
+
+        p.__proto__= {
+            address:"sharaqpur"
+        }
+
+        console.log(a.address)
+
+
+    </script>
+
+     
+
+    
+</body>
+</html>

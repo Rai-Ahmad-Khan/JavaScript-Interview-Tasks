@@ -1,0 +1,16 @@
+.content {
+    height: 500px;
+    position: relative;
+}
+.content img{
+
+        height: 250px;
+        width: 250px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+}
+.content button{  
+   padding: 10px 50px;
+}

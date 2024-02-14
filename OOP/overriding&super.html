@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Overriding And Super KeyWord</title>
+</head>
+<body>
+
+
+    <script>
+        class employee {
+            login() {
+                console.log(`employee has logedIn`)
+            }
+            logout() {
+                console.log(`employee has logedOut`)
+            }
+            requestedleaves(leaves) {
+                console.log(`Employee has requested ${leaves} leaves`)
+            }
+        }
+
+        class programmer extends employee {
+            // if there is no constructer in child class then it is created by JS engine as default which looks like belows snippet.
+            // Must use "super" before using "this" key word.
+            // constructor (...args) {
+            //     super(...args)
+            // }
+            requestCoffee() {
+                console.log(`Requested 1 Coffee`)
+            }
+            requestedleaves(leaves) {
+                super.requestedleaves(leaves)
+                console.log(`Employee has requested ${leaves} leaves but granted ${leaves + 1} (One Extra)`)
+            }
+        }
+
+        let ahmad = new programmer;
+
+        ahmad.login()
+        ahmad.logout()
+        ahmad.requestedleaves(4)
+
+    </script>
+    
+</body>
+</html>

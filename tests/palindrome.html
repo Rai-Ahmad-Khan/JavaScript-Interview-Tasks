@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+
+
+</head>
+<style>
+    *{
+        max-width: 500px;
+        margin: 0 auto;  
+    }
+   
+</style>
+
+<body>
+
+    <div>
+        <h1>Check The Palindrome Number</h1>
+        <input type="text" name="input" id="input">
+        <button type="submit" id="button" onclick="checkit()">Check</button>
+        <h3 id="display"></h3>
+    </div>
+    
+</body>
+<!-- 
+<script>
+
+    function checkit() {
+        
+        let user_input = document.getElementById("input").value;
+        let my_display = document.getElementById("display");
+
+        let my_Number = user_input.split('')
+        const new_Number = [];
+
+        num_length = my_Number.length;
+
+        for(let i=num_length - 1; i>=0; i--) {
+            new_Number.push(my_Number[i])
+        }
+
+        let my_value= true;
+
+        if (my_Number.length === new_Number.length) {
+            for (let i = 0; i < new_Number.length; i++) {
+                if (my_Number[i] !== new_Number[i]) {
+                    my_value = false;
+                }
+            }
+            if (my_value) {
+                my_display.innerHTML = `${user_input} is a palindrome number`;
+            } else {
+                my_display.innerHTML = `${user_input} is not a palindrome number`;
+            } 
+        } 
+    }
+
+</script> -->
+
+
+<script>
+    let my_array = [121,112211,223322,122,1231,121]
+
+    my_array.forEach((item) => {
+        let my_number = String(item).split('')
+        let new_number = [];
+        
+        ArrayLength = my_number.length;
+
+        for(let i=ArrayLength - 1; i>=0; i--) {
+            new_number.push(my_number[i])
+        }
+
+        let my_value=true;
+
+        if (my_number.length === new_number.length) {
+            for (let i = 0; i < new_number.length; i++) {
+                if (new_number[i] !== my_number[i]) {
+                    my_value = false;
+                }
+            }
+            if (my_value) {
+                console.log( item + " is a palindrome number");
+            } else {
+                console.log( item + " is not a palindrome number");
+            } 
+        }
+    })
+</script>
+
+
+</html>

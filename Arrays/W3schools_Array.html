@@ -1,0 +1,197 @@
+<script>
+
+
+
+//                                              at()  
+
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let index = 2;
+// let fruit = fruits.at(index);
+
+// // console.log(fruit);
+
+// // It works same as []. So, what's the difference? see below
+// console.log(fruits.at(3));
+// console.log(fruits[3]);
+
+
+// // Here is the difference
+
+// // console.log(fruits.at(-1)); // It will returns the last value
+// // console.log(fruits[-1]);
+
+
+
+
+ //                                            concat()
+
+
+// const arr1 = ["Cecilie", "Lone"];
+// const arr2 = ["Emil", "Tobias", "Linus"];
+// const arr3 = ["Zuraiz"];
+
+// const children = arr1.concat(arr2);
+// const my_children = arr1.concat(arr2,arr3);
+
+// console.log(children);
+// console.log(my_children);
+
+
+
+
+
+
+//                                            copyWithin()                                                                  
+//  Description:
+//  It start by taking an index and start copying the data equivalent to that index, It start copying the data in a order and overwrite the existing data next to that index.
+// The copyWithin() method copies array elements to another position in the array.
+
+// The copyWithin() method overwrites the existing values.
+
+// The copyWithin() method does not add items to the array.
+//                 req      opt:0  opt:arr.length
+//array.copyWithin(target, start, end)
+
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango", "Apple", "2Mango", "2Apple", "2Mango", "2Apple", "Mango"];
+// console.log(fruits);
+// fruits.copyWithin(4, 0);
+// console.log(fruits);
+
+
+//                                              fill()      
+
+
+// Description
+// The fill() method fills specified elements in an array with a value.
+
+// The fill() method overwrites the original array.
+
+// Start and end position can be specified. If not, all elements will be filled.
+
+// array.fill(value, start, end)  syntax
+
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// // fruits.fill("Kiwi");
+// fruits.fill("Kiwi", 1, 2);
+
+// console.log(fruits);
+
+
+
+//                                               findIndex()
+
+
+// // Description
+// // The findIndex() method executes a function for each array element.
+
+// // The findIndex() method returns the index (position) of the first element that passes a test.
+
+// // The findIndex() method returns -1 if no match is found.
+
+// // The findIndex() method does not execute the function for empty array elements.
+
+// // The findIndex() method does not change the original array.
+
+// // The index of the first element that passes the test.
+// // Otherwise -1.
+
+// const ages = [3, 10, 18, 20,  40];
+
+// console.log(ages.findIndex(checkAge));
+
+// function checkAge(age) {
+//   return age > 18;
+// }
+
+
+
+
+
+//                                             flat()   
+
+// Description
+// The flat() method concatenates sub-array elements
+
+//depth	Optional.
+                // How deep a nested array should be flattened.
+                // Default is 1. oor according to my testing it is full/all.
+
+
+// const myArrr = [[1,2],[3,4],[5,6],[5,6],[5,6],[5,6]];
+// // const myArr = [1,2, [2, [3, [4, 5, 6, 1], 7],8], 9];
+
+// // const newArr = myArr.flat(0);
+// const newArrr = myArrr.flat();
+
+// // console.log(newArr);
+// console.log(newArrr);
+
+
+
+//                                                 flatMap()
+
+// flatMap is a method available for arrays in JavaScript. It is used to both map (transform) and flatten the array. 
+//(x) => x * 2 is an arrow function, which is used as a callback function. It takes each element x from myArr, multiplies it by 2, and returns the result
+
+// // Description
+// // The flatMap() method maps all array elements and creates a new flat array.
+
+// // flatMap() creates a new array from calling a function for every array element.
+
+// // flatMap() does not execute the function for empty elements.
+
+// // flatMap() does not change the original array
+
+// const myArr = [1, 2, 3, 4, 5, 6];
+// const newArr = myArr.flatMap((x) => x + 2);
+// console.log(newArr); 
+
+
+
+
+
+
+
+
+
+//                                              isArray()
+
+
+// Description
+// The isArray() method returns true if an object is an array, otherwise false.
+
+// Array.isArray()
+// Array.isArray() is a static property of the JavaScript Array object.
+
+// You can only use it as "Array.isArray()".   //syntex
+
+// Using x.isArray(), where x is an array will return undefined.
+
+
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// const fruit = "nana, Orange, Apple, Mango";
+
+// let results = Array.isArray(fruits);
+// let result = Array.isArray(fruit);
+
+// console.log(results);
+// console.log(result);
+
+
+
+
+
+
+
+
+//reduce
+//key
+
+
+
+</script>

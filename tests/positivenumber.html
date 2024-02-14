@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positive Number</title>
+</head>
+<body>
+    <p id="id"></p>
+
+    <script>
+
+        let new_array = [];
+        let arr = [-2, 2, 3, 4, -5, 6];
+        
+        positive(arr);
+
+        function positive(n) {
+            for(let x = 0; x < n.length; x++) {
+
+                if(n[x]>0) {
+                    new_array.push(n[x]);
+                }
+            }
+        }
+
+        document.getElementById("id").innerHTML = new_array;
+
+
+    </script>
+    
+</body>
+</html>

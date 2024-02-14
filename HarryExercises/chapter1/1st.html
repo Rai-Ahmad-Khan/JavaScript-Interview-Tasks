@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- For Problem 5 -->
+    <h1>Dictionary</h1>
+    <p>You can search the meaning of these words: <b>population, Lament, Sustenance, confiscate and Remoresless</b>.</p>
+    <input type="text" name="" id="input">
+    <button type="submit" onclick="checkme()"> Check Meaning</button>
+
+    <p id="id"></p>
+    <script>
+
+        // Question 1 and 2
+        // const my_string = "This is DivRai";
+        // const my_number = 10;
+        // const add = my_string + my_number;  // This is DivRai10
+        // console.log(typeof(add)); //string
+
+        // Question 3 and 4
+
+        // In JavaScript, when you use the const keyword to declare a variable, 
+        // it means that the variable cannot be reassigned. However, it's important 
+        // to note that if the variable is an object or an array, the properties or 
+        // elements of the object or array can still be modified. In the case of a 
+        // primitive type, like a number, you cannot change the value once it has 
+        // been assigned.
+
+        // const myObject = { key: 'value' };
+
+        // console.log(myObject); // { key: 'value' }
+
+        // // Modifying the property of the object is allowed
+        // myObject.key = 'new value';
+
+        // console.log(myObject); // { key: 'new value' }
+
+
+
+
+        // Question 5
+
+        // Dictionary
+       
+
+       function checkme() {
+        const my_word = document.getElementById("input");
+      
+        if(my_word.value=="population") {
+
+            document.getElementById("id").innerHTML= "The Number of People in a region";
+
+        } else if (my_word.value== "Lament" ) {
+
+            document.getElementById("id").innerHTML= "crying";
+
+        }  else if (my_word.value== "Sustenance") {
+
+            document.getElementById("id").innerHTML= "Eatable";
+            
+        } else if (my_word.value== "confiscate") {
+
+            document.getElementById("id").innerHTML= "seize";
+            
+        } else if (my_word.value==  "Remoresless" ) {
+
+            document.getElementById("id").innerHTML= "without any kindness";
+            
+        } else {
+
+            document.getElementById("id").innerHTML= "Enter the valid world";
+
+        }
+       }
+        
+
+
+
+
+    </script>
+</body>
+</html>

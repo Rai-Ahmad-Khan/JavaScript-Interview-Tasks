@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="id"></p>
+<p id="my-id"> </p>
+
+<script>
+// let person = {
+//   firstName : "Rai Ahmad",
+//   lastName  : "Khan",
+//   age       :  2023-2000,
+//   eyeColor  : "dark-brownish",
+//   job       : 'developer',
+//   friends   : ['usman', 'ahmad', 'sami', 'usama', 'haider', 'asghar']
+
+// };
+
+
+// const byuser = prompt('What do you want to know about Rai Ahmad Khan ? lets choose from firstname, age, eyeColor ,job and friends');
+
+// console.log(person.byuser); //wrong     it started to find the property name byuser, that is undifind.
+// console.log(person[byuser]); //js will come here and replace the actual value of variable
+
+
+// if user choose an undefined key
+
+// if (person[byuser]) {
+//     console.log(person[byuser]); 
+// } else {
+//     console.log('wrong value : lets choose from firstname, age, eyeColor ,job and friends'); 
+// }
+
+
+//Challenge
+//'Ahmad' has 6 friends, and his best friend is Usman.
+
+//my_method
+// let my_friends = person['friends'];
+// let best_friend = my_friends.indexOf('usman');
+// let statement = console.log("Ahmad has " + my_friends.length + " friends but his best is " + my_friends[best_friend] +".");
+
+
+// //Tuter_Method
+// // By using "template literals"
+
+// let my_friends = person['friends'];
+// let best_friend = my_friends.indexOf('usman');
+// // console.log('${person.firstname} has ${person.friends.length} friends, but his best friend is ${person.friends[best_friend]}'); //not working in my PC
+
+// // (`-----`) Template literals must be enclosed in backticks.
+// console.log(`${person.firstname} has ${person.friends.length} friends, but his best friend is ${person.friends[best_friend]}`);
+
+
+
+
+
+
+
+
+
+
+// let ahmad = {
+//   firstName : "Rai Ahmad",
+//   lastName  : "Khan",
+//   birth     : 2000,
+//   eyeColor  : "dark-brownish",
+//   job       : 'developer',
+//   friends   : ['usman', 'ahmad', 'sami', 'usama', 'haider', 'asghar'],
+//   license   : true,
+
+//   // calculate : function(birth) {
+//   //   return 2023-birth;
+//   //  }
+
+
+//   calculate : function () {
+//     return 2023-this.birth;
+//    }
+
+// };
+
+ // Regular function syntax
+
+// const calculate = function (birth) {    
+//     return 2023-birth;
+//    }
+
+
+
+// // dot notaion
+// console.log(ahmad.calculate(2001));
+                                                    //This violate the don't repeate yourself principle
+// // [] notation                                               
+// console.log(ahmad['calculate'](2000));
+
+
+
+// console.log(ahmad['calculate']());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let ahmad = {
+  firstName : "Rai Ahmad",
+  lastName  : "Khan",
+  birth     :  2000,
+  eyeColor  : "dark-brownish",
+  job       : 'developer',
+  friends   : ['usman', 'ahmad', 'sami', 'usama', 'haider', 'asghar'],
+  license   : true,
+  calculate : function () {
+              this.age = 2023 - this.birth;
+              return this.age;
+            },
+
+   //part of challange 1.0
+
+  getsummary : function () {
+                                                                                                  // () is due to precedence issues:  The problem is that the ternary operator "?" has lower precedence than the "+" operator
+                console.log( this['firstName'] + " is a " + this['calculate']() + "-year old student, and " + (this['license'] ? 'he has a drivers license' : 'he hasent a driver license yet'));
+
+              } 
+
+};
+
+
+// console.log(ahmad['calculate']());
+// console.log(ahmad.age);
+
+
+
+
+// Challange 1.0
+
+// "Ahmad is a 23-year old student, and he has a driver's license."
+
+/*--
+condition : function () {
+
+  if (this['license']==true) {
+    return "he has a driver's license";
+    }else {
+    return "he hasen't a driver license yet";
+    }
+
+  }
+  // This whole thing can be done by a tyrnary operater.
+  this["license"] ? "he has a driver's licens" : "he hasen't a driver license yet"
+--*/
+// console.log("Ahmad is a " + ahmad['age'] + "-year old student, and " + ahmad['condition']());
+ 
+
+  ahmad['getsummary']();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// document.getElementById("id").innerHTML = person.firstName + " " + person.lastName;
+// document.getElementById("my-id").innerHTML = console.log("Ahmad has " + my_friends.length + " friends but his best is " + my_friends[best_friend] +".");
+</script>
+
+</body>
+</html>

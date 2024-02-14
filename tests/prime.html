@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+</head>
+<body>
+    <p id="id"></p>
+
+    <script>
+
+         let arr = [];
+
+         function check_prime(n) {
+
+            if(n<2) {
+                return false;
+            }
+
+            for(let i = 2; i < n; i++) {
+                if(n%i===0) {
+                return false;
+                }
+            }
+
+             return true;
+
+         };
+
+         let count = 0;
+            
+         for(let x = 2; count<100 ; x++) {
+
+            if(check_prime(x)) {
+                arr.push(x);
+                count++;  
+            }
+
+        };
+
+        document.getElementById("id").innerHTML = arr;
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+

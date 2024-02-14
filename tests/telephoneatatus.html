@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telephone Status</title>
+</head>
+<body>
+    <p id="id"></p>
+
+
+    <script>
+        let para = document.getElementById("id");
+
+        let x;
+       do {
+        
+        x = prompt(`What is your Telephone Status: "w" for working and "d" for dead`);
+        
+       if (x!='w' && x!='d') {
+        alert("Wrong Entry: Please Enter The Valid Character");
+       }
+
+       } while (x!='w' && x!='d')
+
+
+       if(x=="d" || x=="D") {
+        para.innerHTML = " Phone Is dead";
+       } else if (x=="w" || x =="W") {
+        para.innerHTML = " Phone is working";
+
+       }
+
+
+    </script>
+    
+</body>
+</html>

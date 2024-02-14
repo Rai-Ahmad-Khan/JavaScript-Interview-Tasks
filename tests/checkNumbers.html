@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Number</title>
+</head>
+<body>
+
+    <p id="id"></p>
+
+
+
+    <script>
+
+        let para = document.getElementById('id');
+        let x = prompt ('Type First Number');      
+        let y = prompt ('Type 2nd Number');
+        let z = prompt ('Type 3rd Number');
+
+        if (x>y && x>z) {
+            para.innerHTML= x + " is greater";
+        } else if (y>x && y>z) {
+            para.innerHTML = y + " is greater";
+        } else {
+            para.innerHTML = z + " is greater";
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+        <h1>JavaScript Functions</h1>
+
+    <ul>
+        <li>
+            <p>Function is simply a piecce of code that we can use time and time again, so its a little like variables.</p>
+        </li>
+        <li>
+            <p>Funtions allows us to write , more  maintainable code. Because with fuctions we can create reuseable chunks of code, instead of manually write the same code time and time again.</p>
+        </li>
+        <li>
+            <p>Function is also very useful principle of coding because it narrates,<b> "don't repeat principle":dry code</b></p>
+        </li>
+        <li>
+            <p>Functions are fundamental building blocks in JavaScript</p>
+        </li> 
+    </ul>
+
+
+    <h1>Types of Functions</h1>
+   <ol>
+        <li>
+         <pre>
+                    <b>Function Declaration</b>
+        
+            function calcAge1 (birthday1) {
+                return 2023-birthday1;
+            }
+            const Age1 = calcAge1(2000);
+         </pre>
+        </li>
+        <li>
+        <pre>
+            
+                <b>Function expressoin/Annonumaous function:</b>
+
+            The function without name. 
+            Here you store it in varibale and the variable itself become a function.
+
+
+            // const Age2 = calcAge2(2000);  // This can not be done in the expression case
+            <b>For Example</b>
+            const calcAge2 = function (birthday2) {
+                return 2023-birthday2;
+            }
+            const Age2 = calcAge2(2000);
+
+            console.log(Age1, Age2);
+
+            <p><b>Note: </b>The big difference between function expression and function delaration is that delaration can be called first but expression can not be called before declarring the function</p>
+
+
+        </pre>
+        </li>
+        <li>
+            <pre>
+                <b>Arrow Function</b>
+
+                const calAge = birthYear => 2023-birthYear;
+                calAge(2000);
+            </pre>
+        </li>
+    </ol>
+
+    <!-- Analogy -->
+    <!-- function are like machines, they take data, process it and return it. -->
+
+    <!-- functions are values in Js: strings number or boolean. its a value that can be store in a variables -->
+
+
+    <h3>Arguments are the actual values of the function's parameters, they are passed while calling functions. </h3> 
+    <h3>Parameters are the values which we pass while writing the functions, more probably these are the place holders or temparary value that later would be taken/retrieved by the arguments</h3>
+
+    <br><br><br>
+     <h1>Here Are The Results</h1>
+    <p id="getme1"></p>
+ 
+
+
+    
+
+    <p id="getme2"></p>
+
+    <h3>By Using Arrow Function</h3>
+    <p id="getme3"></p>
+
+    <p id="getme4"></p>
+
+
+
+    <h1>Challange</h1>
+
+
+    <!-- Challange -->
+    <h3>First-Q</h3>
+    <!-- first_Q -->
+    <p id="First_Q"></p>
+
+    <h3>Second-Q</h3>
+    <!-- Sec_Q -->
+    <p id="Sec_Q"></p>
+
+    
+<script>
+// This is simply a function declaration
+function foodProcessor(my_apples, my_oranges) {
+    if(my_apples>0 && my_oranges>0) {
+                           // GTemplate Literals
+        const juice = `The Juice is prepaired by ${my_apples} apples and ${my_oranges} oranges`;
+        return juice;
+    }else {
+        return "Shortage of fruits";
+    }
+}
+
+const result = foodProcessor(2,3);
+const result2 = foodProcessor(5,6);
+
+
+document.getElementById('getme1').innerHTML = result;
+
+
+// This is an annonumaous function
+//The function without name. 
+// Here you store it in varibale and the variable itself become a function.
+
+
+
+//Function Declaration
+const calcAge1 = function (birthday1) {
+    return 2023-birthday1;
+}
+const Age1 = calcAge1(2000);
+
+
+
+ //Function expressoin/Annonumaous function:
+
+ //The function without name. 
+// Here you store it in varibale and the variable itself become a function.
+
+
+// const Age2 = calcAge2(2000);  // This can not be done in the expression case
+
+const calcAge2 = function (birthday2) {
+    return 2023-birthday2;
+}
+const Age2 = calcAge2(2000);
+
+console.log(Age1, Age2);
+
+
+
+
+//Arrow Function
+// "this" key world will not work here
+birthYear => 2023 - birthYear;
+const Age3 = calcAge3(2000);
+
+
+const yearsUntillRetirnment = mybirthYear => {
+    const age = 2023 - mybirthYear;
+    const ReAge = 65 - age;
+    return ReAge;
+}
+const MyReAge = yearsUntillRetirnment(2001);
+document.getElementById('getme2').innerHTML = MyReAge;
+
+
+
+
+
+
+const YearsTillRetirnment2 = (firstName, mybirthYear2) => {
+    const age2 = 2023 - mybirthYear2;
+    const ReAge2 = 65 - age2;
+    return `${firstName} is going to retire in ${ReAge2} years`;
+}
+
+
+const MyReAge2 = YearsTillRetirnment2('Rai Ahmad',2000);
+document.getElementById('getme3').innerHTML = MyReAge2;
+
+
+const MyReAge3 = YearsTillRetirnment2("Usman", 2003);
+document.getElementById('getme4').innerHTML = MyReAge3;
+
+
+
+
+
+
+
+// // Calling a Function in a function
+// const yearsUntillRetirnment = () => {
+//     const age = Age3;
+//     const ReAge = 65 - age;
+//     return ReAge;
+// }
+// const MyReAge = yearsUntillRetirnment();
+// document.getElementById('getme3').innerHTML = MyReAge;
+
+
+
+
+
+// Challange
+
+Team_1 = "Dolphines";
+Team_2 = "Koalas";
+
+const calcAverage = function (score1, score2, score3) {
+    return (score1 + score2 + score3)/3;
+};
+
+    // First
+    Team1_Average = calcAverage(44, 23, 71);
+    Team2_Average = calcAverage(65, 54, 49);
+
+    // Second
+    my_Average1 = calcAverage(85, 54, 41);
+    my_Average2 = calcAverage(23, 34, 27);
+
+   
+
+function ChechWinner (First_team_Average, Sec_team_Average) {
+
+    if (First_team_Average >= (Sec_team_Average*2)) {
+
+        return `${Team_1} won (${First_team_Average} vs. ${Sec_team_Average})`;
+        
+    } else if(Sec_team_Average >= (First_team_Average*2)) {
+
+        return `${Team_2} won (${Sec_team_Average} vs. ${First_team_Average})`;
+
+    } else {
+
+        return "No team Won";
+
+    }
+}
+
+
+document.getElementById('First_Q').innerHTML = ChechWinner(Team1_Average, Team2_Average);
+
+document.getElementById('Sec_Q').innerHTML = ChechWinner(my_Average1, my_Average2);
+
+
+
+
+// // Function Reference & Function Invocation ?
+
+// // Function Reference:
+
+// window.addEventListener("mousemove", logMousePosition);
+
+// // This passes a reference to the logMousePosition function. The function will be called when the "mousemove" event occurs.
+
+// // Function Invocation:
+
+// window.addEventListener("mousemove", logMousePosition());
+
+// // This immediately calls logMousePosition and passes its return value to addEventListener. This is not what you want in this case, as the function will be executed only once when the event listener is set up, not every time the mouse moves.
+
+// // So, in event listeners, you generally provide a reference to the function (without parentheses) so that the function can be executed later, in response to the event.
+
+
+
+</script>
+</body>
+</html>

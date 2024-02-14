@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button</title>
+</head>
+<body>
+
+    <label for="id1">Red</label>
+    <input type="radio" name="color" value="red" id="id1">
+    <br>
+
+    <label for="id2">Blue</label>
+    <input type="radio" name="color" value="blue" id="id2">
+    <br>
+
+    <label for="id3">Green</label>
+    <input type="radio" name="color" value="green" id="id3">
+    <br>
+    
+    <button type="button" onclick="getSelectedValue()">Select</button>
+  
+
+    <script>
+        function getSelectedValue() {
+    
+        var selectedColor = document.querySelector("input[name=color]:checked");
+
+        if (selectedColor) {
+            
+            var colorValue = selectedColor.value;
+            alert("Selected Color: " + colorValue);
+
+        } else {
+
+            alert("Please select a color");
+            
+        }
+    }
+
+
+    </script>
+    
+</body>
+</html>

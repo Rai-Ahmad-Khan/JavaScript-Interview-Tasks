@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaper 3</title>
+</head>
+<body>
+
+    <script>
+        // Question 1
+        const my_object = { Ahmad: 98, Usman: 93, Sami: 97};
+        // my_object =[1,2,3,4]
+
+        const keys = Object.keys(my_object);
+        
+        for(let i = 0; i < keys.length; i++) {
+            const key = keys[i];
+            const value = my_object[key];
+            console.log(`${key}: ${value}`);
+        };
+
+
+
+
+        // // Question 2
+
+        const my_object2 = { Ali:"hello", Ahmad: 98, Usman: 93, Sami: 97};
+     
+        for(const key in my_object2) {
+            const value = my_object2[key];
+            console.log(`${key}: ${value}`);
+        };
+     
+    
+        // // Question 3
+        let x = "";
+
+        do {
+            x= prompt("Write D Or W");
+            console.log(x);
+
+            if (x!="D" && x!="W") {
+            alert("Wrong Entry: Please Enter The Valid Character");
+            }
+            
+        } while (x!="D" && x!="W");
+        
+
+    </script>
+    
+</body>
+</html>

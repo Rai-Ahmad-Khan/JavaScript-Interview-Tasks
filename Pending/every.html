@@ -1,0 +1,36 @@
+<!-- Description
+The every() method executes a function for each array element.
+
+The every() method returns true if the function returns true for all elements.
+
+The every() method returns false if the function returns false for one element.
+
+The every() method does not execute the function for empty elements.
+
+The every() method does not change the original array -->
+
+<!-- // array.every(function(currentValue, index, arr), thisValue) -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- <h1>JavaScript Arrays</h1>
+<h2>The every() Method</h2>
+
+<p>every() returns true if all elements in an array pass a test (provided as a function).</p> -->
+
+<p id="demo"></p>
+
+<script>
+const ages = [32, 33, 40, 40];
+document.getElementById("demo").innerHTML = ages.every(checkAge);
+
+function checkAge(age) {
+  return age > 18;
+}
+
+</script>
+
+</body>
+</html>

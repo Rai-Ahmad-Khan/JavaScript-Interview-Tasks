@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Input In An Array</title>
+</head>
+<body>
+    <input type="text" name="my_inpu" id="input">
+    <button onclick="callme()">Add</button>
+    <p id="id"></p>
+    <p id="hlw"></p>
+
+
+    <script>
+        // Question 1
+
+       
+          
+                // let arr = [];
+                // function callme() {
+                // let my_inpu = document.getElementById("input").value;
+
+                // if (my_inpu != "" ) {
+                //     for(let i=0; i<arr.length; i++) {
+                        
+                //     }
+                //     arr.push(my_inpu);
+                // };
+                // document.getElementById("id").innerHTML = arr;
+                // };
+
+         
+
+
+        // Question 2
+
+            let arr = [];
+            function callme() {
+           
+            let my_inpu = document.getElementById("input").value;
+
+            if (my_inpu != "" && my_inpu!=0 ) {
+                arr.push(my_inpu);
+                document.getElementById("id").innerHTML = arr;
+            } else if (my_inpu == 0 && my_inpu !="") {
+                document.getElementById("hlw").innerHTML = "Your Array Is completed"
+            }
+            
+    
+            };
+    </script>
+    
+</body>
+</html>

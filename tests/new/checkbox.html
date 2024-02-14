@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkboxes</title>
+</head>
+<body>
+    <h2>Choose Your Developer</h2>
+    <label for="Jawad">Jawad</label>
+    <input type="checkbox" class="myCheckbox" value="Jawad" >
+    
+    <label for="Umer">Umer</label>
+    <input type="checkbox" class="myCheckbox"  value="Umer" >
+    
+    <label for="Ahmad">Ahmad</label>
+    <input type="checkbox" class="myCheckbox" value="Ahmad" >
+    
+    <label for="Ali">Ali Khan</label>
+    <input type="checkbox" class="myCheckbox"  value="Ali Khan" >
+    <br>
+
+    <button onclick="getYourDeveloper()">Get Your Developer</button>
+
+    <script>
+
+        getYourDeveloper = () => {
+
+            const selected = [];
+            const checkbox = document.getElementsByClassName("myCheckbox");
+            
+            for(let i=0; i < checkbox.length; i++) {
+                if(checkbox[i].checked) {
+                    selected.push(checkbox[i].value);
+                }  
+            }
+
+            if (selected.length === 0) {
+                alert("No Developer selected.");
+            } else if (selected.length === 1) {
+                alert("You Selected " + selected + " As Your Developer.");
+            } else if (selected.length === 2) {
+                alert("You Selected " + selected[0] + " And " + selected[1] + " As Your developers.");
+            } else if (selected.length === 3) {
+                alert("You Selected " + selected[0]  +", " + selected[1] + " And " + selected[2] + " As Your developers.");
+            } else if (selected.length === 4) {
+                alert("You Selected " + selected[0] +", " + selected[1] + ", "+ selected[2]+ " And "+ selected[3] + " As Your developers.");
+                alert("Warning: You Can't Afford Them All At Once, They Are Highly Payables!"); 
+            }
+
+        }
+
+    </script>
+
+    
+</body>
+</html>

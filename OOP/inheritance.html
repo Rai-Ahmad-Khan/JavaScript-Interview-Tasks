@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+
+    <script>
+        class education {
+
+            constructor(name, education, university) {
+                this.name = name
+                this.education = education
+                this.university = university
+            }
+           
+            PreView () {
+                alert(`${this.name} is a ${this.education}`)
+            }
+            insititute () {
+                alert(`${this.name}'s institute is ${this.university}`)
+            }
+
+        }
+
+        class attributes extends education {
+            status() {
+                alert("And he is very polite")
+            }
+        }
+
+        let Ahmad =new education('Ahmad', 'Graduate', "PU");
+ 
+        
+        let Usman =new attributes('Usman', 'Under Graduate', "UMT");
+        
+        Ahmad.PreView()
+        Ahmad.insititute()
+
+
+        Usman.PreView()
+        Usman.insititute()
+        Usman.status()
+    </script>
+    
+</body>
+</html>

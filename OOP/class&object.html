@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class & Object</title>
+</head>
+<body>
+
+
+
+    <script>
+        class RailvayForm{
+           
+            submit () {
+                alert(`${this.name} Your form is submitted for train number ${this.number}`)
+            }
+            cancel () {
+                alert(`${this.name} Your form is cancel for train number ${this.number}`)
+            }
+            fill (givenName, trainNumber) {
+                this.name = givenName
+                this.number = trainNumber
+            }
+
+        }
+
+        let Ahmad =new RailvayFrom();
+        Ahmad.fill('Ahmad', 12)
+        
+        
+        let Usman =new RailvayFrom();
+        Usman.fill("Usman", 12)
+        
+        
+        Usman.cancel()
+        Ahmad.submit()
+    </script>
+    
+</body>
+</html>

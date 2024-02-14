@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        let a = [1,3,8,2,5];
+        let b =[6,10,4,9,7];
+
+        let sorted=[];
+
+        let combine= a.concat(b)
+
+        let mini = combine[0];
+        let max = combine[0];
+
+        for(let i=1; i< combine.length; i++) {
+            if(combine[i]< mini) {
+                mini = combine[i]
+            } else if(combine[i]> max) {
+                max = combine[i]
+            }
+        }
+        for (let j = mini; j <= max; j++) {
+            if (combine.includes(j)) {
+                sorted.push(j);
+            }
+        }
+        console.log(sorted)
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+// let ordered =[...new Set(combine)]
+
+// let min = Math.min(...ordered) -->
+</body>
+</html>

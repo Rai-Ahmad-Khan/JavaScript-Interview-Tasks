@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Position box</title>
+    <style>
+        .box {
+            position: absolute;
+            background-color: #f0f0f0;
+            padding: 5px;
+            border: 1px solid #ccc;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box" class="box">Cursor position: <span id="positionData"></span></div>
+
+    <script>
+        function updateboxPosition(my_parameter) {
+            var box = document.getElementById("box");
+            var boxData = document.getElementById("positionData");
+
+            // Update box text
+            boxData.textContent = my_parameter.clientX + " x " + my_parameter.clientY;
+
+            // Update box position
+            box.style.left = my_parameter.clientX + 10 + "px";
+            box.style.top = my_parameter.clientY - 30 + "px";
+
+            // Show the box
+            box.style.display = "block";
+        }
+
+ 
+        // Attach functions to 'mousemove' event --> by reference not by invocation //VIP
+        window.addEventListener("mousemove", updateboxPosition);
+
+    </script>
+
+</body>
+</html>

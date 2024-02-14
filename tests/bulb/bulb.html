@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bulb</title>
+</head>
+<body>
+    <div class="content">
+        <img src="./images/images (1).jpg" alt="image-off" class="off" id="my_image">
+        <button type="submit" onclick="callme()" id="my-button">Turn On</button>
+    </div>
+
+
+
+    <script>
+
+        var my_button = document.getElementById("my-button");
+        var my_image = document.getElementById("my_image");
+        
+
+        function callme() {
+
+            if (my_button.textContent == 'Turn On' ) {
+
+                my_image.src = './images/realistic-lit-light-bulb-isolated_1284-41774.jpg';
+                my_button.textContent = 'Turn Off';
+              
+
+            } else {
+
+                my_image.src = './images/images (1).jpg';
+                my_button.textContent = 'Turn On';
+
+            }
+            
+        };
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="id"></p>
+
+    <script>
+        let arr = ["a","s","d","f","g","h","j","k","u","y","t","r","e","w","I","i","o","O","U","u"];
+        let str = "Hello Sir How Is It Going?";
+
+        vowel=[];
+        my_vowel="";
+
+        function check_vowel(parameter) {
+
+            for(let x = 0; x < parameter.length; x++) {
+                
+                let char = parameter[x].toLowerCase();
+                    
+                if(char==="a" || char==="e" || char==="i" || char==="o" || char==="u") {
+
+                    vowel.push(parameter[x]);
+                    // my_vowel= my_vowel + parameter[x];
+
+                }
+            }  
+            return vowel;
+            // return my_vowel; 
+        }
+
+        document.getElementById("id").innerHTML = check_vowel(arr);
+        // document.getElementById("id").innerHTML = check_vowel(str);
+
+
+    </script>
+    
+</body>
+</html>

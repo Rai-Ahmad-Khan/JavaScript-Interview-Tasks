@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2</title>
+</head>
+<body>
+
+    <h1>Check Age Eligibility</h1>
+    <p>The person age must be between 10 and 20.</p>
+    <input type="text" name="" id="input">
+    <button type="submit" onclick="checkme()"> Check</button>
+
+    <p id="id"></p>
+
+    <script>
+        
+       function checkme() {
+        const my_age = document.getElementById("input");
+
+        const age = my_age.value
+      
+        if(age<20 && age>10) {
+
+            document.getElementById("id").innerHTML= `Your age is ${age} and you are elegible.`;
+
+        } else {
+
+            document.getElementById("id").innerHTML= `Your age is ${age} and you are not elegible.`;
+
+        }
+       }
+       
+    </script>
+    
+</body>
+</html>

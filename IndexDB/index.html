@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexDB</title>
+</head>
+<body>
+    
+    <script>
+        const request = indexedDB.open("hello");
+        //On upgrade needed
+        request.onupgradeneeded = x => {
+            alert("Updrade needed");
+        }
+        // On Success
+        request.onsuccess = x => {
+            alert("Success Is Called");
+        }
+        // On Error
+        request.onerror = x => {
+            alert("Error");
+        }
+    </script>
+    
+</body>
+</html>

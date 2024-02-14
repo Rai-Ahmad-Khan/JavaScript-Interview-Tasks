@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructer</title>
+</head>
+<body>
+
+    <script>
+        class RailvayForm{
+        //    default constructer looks like this --> constructor () {} 
+            constructor(givenName, trainNumber) {
+                this.name = givenName
+                this.number = trainNumber
+            }
+           
+            PreView () {
+                alert(`${this.name} Your form is for train number ${this.number}`)
+            }
+            submit () {
+                alert(`${this.name} Your form is submitted for train number ${this.number}`)
+            }
+            cancel () {
+                alert(`${this.name} Your form is cancelled for train number ${this.number}`)
+                console.log(`${this.name} Your form is cancelled for train number ${this.number}`)
+            }
+
+        }
+
+        let AhmadForm =newRailvayForm('Ahmad', 12);
+ 
+        
+        let UsmanForm =newRailvayForm('Usman', 13);
+        
+        AhmadForm.PreView()
+        AhmadForm.submit()
+
+        UsmanForm.PreView()
+        UsmanForm.cancel()
+    </script>
+    
+</body>
+</html>

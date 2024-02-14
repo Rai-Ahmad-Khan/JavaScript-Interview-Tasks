@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Method</title>
+</head>
+<body>
+
+
+    <script>
+
+        class employee {
+            constructor (name) {
+                // Static method are not available for individual objects
+                this.name =employee.Capitalizee(name)
+            }
+            login() {
+                console.log(`employee ${this.name} has logedIn`)
+            }
+            logout() {
+                console.log(`employee ${this.name} has logedOut`)
+            }
+            requestedleaves(leaves) {
+                console.log(`Employee has requested ${leaves} leaves`)
+            }
+            static Capitalizee(name) {
+               return name.charAt(0).toUpperCase() + name.substr(1, name.length)
+            }
+        }
+
+        let ahmad = new employee("sami");
+
+        ahmad.login()
+        ahmad.logout()
+        ahmad.requestedleaves(4)
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="id" onmouseenter="changeColor()" onmouseleave="revers()">Hello Sir, How are you?</p>
+    
+</body>
+<script>
+
+    function changeColor() {
+        const x = document.getElementById("id");
+        x.style.color = "red";
+    }
+    function revers() {
+        const x = document.getElementById("id");
+        x.style.color = "initial";
+    }
+
+</script>
+</html>
